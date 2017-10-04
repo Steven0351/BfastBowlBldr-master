@@ -13,13 +13,7 @@ class LiquidTableViewController: UITableViewController, CellProtocol {
     var ingredients = [Ingredient]()
     var selectedIngredients = [Ingredient]()
     
-    let liquidImages = [String]()
-    let liquidNames = [String]()
-    let liquidCopy = [String]()
-    let liquidInfo = [String]()
-    let liquidPurch = [String]()
-    
-    liquidImages = ["AlmondMilk.jpg",
+    let liquidImages = ["AlmondMilk.jpg",
     "Cashewmilk.jpg",
     "icon.jpg",
     "icon.jpg",
@@ -28,7 +22,7 @@ class LiquidTableViewController: UITableViewController, CellProtocol {
     "icon.jpg",
     "Soymilk.jpg"]
     
-    liquidNames = ["Almond Milk",
+    let liquidNames = ["Almond Milk",
     "Cashew Milk",
     "Coconut Milk",
     "Coconut Water",
@@ -37,7 +31,7 @@ class LiquidTableViewController: UITableViewController, CellProtocol {
     "Smoothie - various",
     "Soy Milk"]
     
-    liquidCopy = ["Almond Milk copy",
+    let liquidCopy = ["Almond Milk copy",
     "Cashew Milk copy",
     "Coconut Milk copy",
     "Coconut Water copy",
@@ -46,7 +40,7 @@ class LiquidTableViewController: UITableViewController, CellProtocol {
     "Smoothie - various copy",
     "Soy Milk copy"]
     
-    liquidInfo = ["https://en.wikipedia.org",
+    let liquidInfo = ["https://en.wikipedia.org",
     "https://en.wikipedia.org",
     "https://en.wikipedia.org",
     "https://en.wikipedia.org",
@@ -55,7 +49,7 @@ class LiquidTableViewController: UITableViewController, CellProtocol {
     "https://en.wikipedia.org",
     "https://en.wikipedia.org"]
     
-    liquidPurch = ["https://www.amazon.com",
+    let liquidPurch = ["https://www.amazon.com",
     "https://www.amazon.com",
     "https://www.amazon.com",
     "https://www.amazon.com",
@@ -80,6 +74,10 @@ class LiquidTableViewController: UITableViewController, CellProtocol {
             selectedIngredients.remove(at: index)
         }
     }
+    
+    @IBAction func liquidSelected(_ sender: UIButton) {
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -108,12 +106,12 @@ class LiquidTableViewController: UITableViewController, CellProtocol {
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem
-}
 
-override func didReceiveMemoryWarning() {
+
+ override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
-}
+ }
 
 // MARK: - Table view data source
 
@@ -129,7 +127,7 @@ override func tableView(_ tableView: UITableView, numberOfRowsInSection section:
 
 
 override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "IngredientTableCell", for: indexPath) as! IngredientTableViewCell
+    let cell = tableView.dequeueReusableCell(withIdentifier: "LiquidTableCell", for: indexPath) as! LiquidTableViewCell
     
     let row = indexPath.row
     cell.ingredientName.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.headline)
@@ -200,7 +198,7 @@ override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     }
 }
 
-
 }
+
 
 

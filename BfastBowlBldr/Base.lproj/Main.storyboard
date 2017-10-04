@@ -264,6 +264,7 @@
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <connections>
+                                <action selector="liquidSelected:" destination="ycj-X7-Mf2" eventType="touchUpInside" id="Wma-LP-lZW"/>
                                 <segue destination="2SW-P5-9tf" kind="show" identifier="SelectAddIn" id="eLG-oD-Eqd"/>
                             </connections>
                         </button>
@@ -294,7 +295,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="onTintColor" red="0.22179937359999999" green="0.76650786400000004" blue="0.93796795610000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <connections>
-                                                <action selector="liquidSwitch:" destination="vKZ-DO-kLv" eventType="valueChanged" id="Ra7-wc-icP"/>
+                                                <action selector="switchSelected:" destination="vKZ-DO-kLv" eventType="valueChanged" id="i0C-oy-gkn"/>
                                             </connections>
                                         </switch>
                                     </subviews>
@@ -302,6 +303,7 @@
                                 <connections>
                                     <outlet property="liquidImage" destination="HIe-jv-dbO" id="eBy-t4-GgP"/>
                                     <outlet property="liquidName" destination="xct-mw-v98" id="BHs-gc-26j"/>
+                                    <outlet property="liquidSwitch" destination="nG0-1k-jVB" id="vYT-yO-InY"/>
                                     <segue destination="f7K-61-96T" kind="show" identifier="ShowLiquidDetails" id="NTS-h6-pus"/>
                                 </connections>
                             </tableViewCell>

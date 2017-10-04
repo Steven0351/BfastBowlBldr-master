@@ -8,12 +8,25 @@
 
 import UIKit
 
+
+
 class LiquidTableViewCell: UITableViewCell {
+    
+    func switchButtonTapped(WithStatus status: Bool, ForCell myCell: LiquidTableViewCell) {
+        
+    }
+    
+    
+  
+    
     @IBOutlet weak var liquidImage: UIImageView!
     
     @IBOutlet weak var liquidName: UILabel!
      
-    @IBAction func liquidSwitch(_ sender: UISwitch) {
+    @IBOutlet weak var liquidSwitch: UISwitch!
+    
+    @IBAction func switchSelected(_ sender: UISwitch) {
+       //  self.delegate?.switchButtonTapped(WithStatus: sender.isOn, ForCell: self)
     }
     
     
