@@ -7,21 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6240181A1F8DC37100CD24DC /* IngredientCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624018181F8DC37100CD24DC /* IngredientCell.swift */; };
+		6240181B1F8DC37100CD24DC /* IngredientCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 624018191F8DC37100CD24DC /* IngredientCell.xib */; };
 		943274A91F6B09FF00E341A2 /* MainMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943274A81F6B09FF00E341A2 /* MainMenuTableViewController.swift */; };
 		943274AB1F6B2FAF00E341A2 /* IngredientTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943274AA1F6B2FAF00E341A2 /* IngredientTableViewController.swift */; };
-		943274AD1F6B300700E341A2 /* IngredientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943274AC1F6B300700E341A2 /* IngredientTableViewCell.swift */; };
 		943274AF1F6B3CB900E341A2 /* IngredientDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943274AE1F6B3CB900E341A2 /* IngredientDetailViewController.swift */; };
 		9456341B1F73C3AC00D19B6C /* AppBackstoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9456341A1F73C3AC00D19B6C /* AppBackstoryViewController.swift */; };
 		948766521F731AAD00971F42 /* HowItWorksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948766511F731AAD00971F42 /* HowItWorksViewController.swift */; };
 		9493AA6D1F72B50100F6604B /* LiquidTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9493AA6C1F72B50100F6604B /* LiquidTableViewController.swift */; };
-		9493AA6F1F72B51100F6604B /* LiquidTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9493AA6E1F72B51000F6604B /* LiquidTableViewCell.swift */; };
 		9493AA711F72C18900F6604B /* EquipmentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9493AA701F72C18900F6604B /* EquipmentTableViewController.swift */; };
-		9493AA731F72C19C00F6604B /* EquipmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9493AA721F72C19B00F6604B /* EquipmentTableViewCell.swift */; };
-		9493AA751F72C9F500F6604B /* AddInTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9493AA741F72C9F500F6604B /* AddInTableViewCell.swift */; };
 		9493AA771F72CA0500F6604B /* AddInTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9493AA761F72CA0500F6604B /* AddInTableViewController.swift */; };
 		9493AA791F72D17E00F6604B /* FruitTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9493AA781F72D17E00F6604B /* FruitTableViewController.swift */; };
-		9493AA7B1F72D18F00F6604B /* FruitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9493AA7A1F72D18F00F6604B /* FruitTableViewCell.swift */; };
-		9493AA7D1F72D93E00F6604B /* ToppingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9493AA7C1F72D93E00F6604B /* ToppingTableViewCell.swift */; };
 		9493AA7F1F72D94F00F6604B /* ToppingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9493AA7E1F72D94F00F6604B /* ToppingTableViewController.swift */; };
 		9497824A1F6C3261003AB3E7 /* WebsiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949782491F6C3261003AB3E7 /* WebsiteViewController.swift */; };
 		94BC067D1F6037BD0075A5BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BC067C1F6037BD0075A5BF /* AppDelegate.swift */; };
@@ -33,21 +29,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		624018181F8DC37100CD24DC /* IngredientCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientCell.swift; sourceTree = "<group>"; };
+		624018191F8DC37100CD24DC /* IngredientCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IngredientCell.xib; sourceTree = "<group>"; };
 		943274A81F6B09FF00E341A2 /* MainMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuTableViewController.swift; sourceTree = "<group>"; };
 		943274AA1F6B2FAF00E341A2 /* IngredientTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientTableViewController.swift; sourceTree = "<group>"; };
-		943274AC1F6B300700E341A2 /* IngredientTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientTableViewCell.swift; sourceTree = "<group>"; };
 		943274AE1F6B3CB900E341A2 /* IngredientDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientDetailViewController.swift; sourceTree = "<group>"; };
 		9456341A1F73C3AC00D19B6C /* AppBackstoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBackstoryViewController.swift; sourceTree = "<group>"; };
 		948766511F731AAD00971F42 /* HowItWorksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowItWorksViewController.swift; sourceTree = "<group>"; };
 		9493AA6C1F72B50100F6604B /* LiquidTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiquidTableViewController.swift; sourceTree = "<group>"; };
-		9493AA6E1F72B51000F6604B /* LiquidTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiquidTableViewCell.swift; sourceTree = "<group>"; };
 		9493AA701F72C18900F6604B /* EquipmentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentTableViewController.swift; sourceTree = "<group>"; };
-		9493AA721F72C19B00F6604B /* EquipmentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentTableViewCell.swift; sourceTree = "<group>"; };
-		9493AA741F72C9F500F6604B /* AddInTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddInTableViewCell.swift; sourceTree = "<group>"; };
 		9493AA761F72CA0500F6604B /* AddInTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddInTableViewController.swift; sourceTree = "<group>"; };
 		9493AA781F72D17E00F6604B /* FruitTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitTableViewController.swift; sourceTree = "<group>"; };
-		9493AA7A1F72D18F00F6604B /* FruitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitTableViewCell.swift; sourceTree = "<group>"; };
-		9493AA7C1F72D93E00F6604B /* ToppingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToppingTableViewCell.swift; sourceTree = "<group>"; };
 		9493AA7E1F72D94F00F6604B /* ToppingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToppingTableViewController.swift; sourceTree = "<group>"; };
 		949782491F6C3261003AB3E7 /* WebsiteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebsiteViewController.swift; sourceTree = "<group>"; };
 		94BC06791F6037BD0075A5BF /* BfastBowlBldr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BfastBowlBldr.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,6 +63,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6212DDF21F861E59009B64A0 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				943274A81F6B09FF00E341A2 /* MainMenuTableViewController.swift */,
+				943274AA1F6B2FAF00E341A2 /* IngredientTableViewController.swift */,
+				943274AE1F6B3CB900E341A2 /* IngredientDetailViewController.swift */,
+				949782491F6C3261003AB3E7 /* WebsiteViewController.swift */,
+				9493AA6C1F72B50100F6604B /* LiquidTableViewController.swift */,
+				9493AA761F72CA0500F6604B /* AddInTableViewController.swift */,
+				9493AA781F72D17E00F6604B /* FruitTableViewController.swift */,
+				9493AA7E1F72D94F00F6604B /* ToppingTableViewController.swift */,
+				94F2F80B1F7AA71200C95907 /* BuildYourBowlTableViewController.swift */,
+				948766511F731AAD00971F42 /* HowItWorksViewController.swift */,
+				9493AA701F72C18900F6604B /* EquipmentTableViewController.swift */,
+				9456341A1F73C3AC00D19B6C /* AppBackstoryViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		6212DDF31F861E88009B64A0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				94BC06851F6037BD0075A5BF /* LaunchScreen.storyboard */,
+				94BC06801F6037BD0075A5BF /* Main.storyboard */,
+				624018181F8DC37100CD24DC /* IngredientCell.swift */,
+				624018191F8DC37100CD24DC /* IngredientCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6212DDF41F861E9C009B64A0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				94D3262A1F83ABCB006E397C /* Ingredient.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		94BC06701F6037BD0075A5BF = {
 			isa = PBXGroup;
 			children = (
@@ -90,29 +120,11 @@
 		94BC067B1F6037BD0075A5BF /* BfastBowlBldr */ = {
 			isa = PBXGroup;
 			children = (
+				6212DDF41F861E9C009B64A0 /* Model */,
+				6212DDF31F861E88009B64A0 /* View */,
+				6212DDF21F861E59009B64A0 /* ViewControllers */,
 				94BC067C1F6037BD0075A5BF /* AppDelegate.swift */,
-				943274A81F6B09FF00E341A2 /* MainMenuTableViewController.swift */,
-				94D3262A1F83ABCB006E397C /* Ingredient.swift */,
-				943274AA1F6B2FAF00E341A2 /* IngredientTableViewController.swift */,
-				943274AC1F6B300700E341A2 /* IngredientTableViewCell.swift */,
-				9493AA6E1F72B51000F6604B /* LiquidTableViewCell.swift */,
-				943274AE1F6B3CB900E341A2 /* IngredientDetailViewController.swift */,
-				949782491F6C3261003AB3E7 /* WebsiteViewController.swift */,
-				9493AA6C1F72B50100F6604B /* LiquidTableViewController.swift */,
-				9493AA761F72CA0500F6604B /* AddInTableViewController.swift */,
-				9493AA741F72C9F500F6604B /* AddInTableViewCell.swift */,
-				9493AA781F72D17E00F6604B /* FruitTableViewController.swift */,
-				9493AA7A1F72D18F00F6604B /* FruitTableViewCell.swift */,
-				9493AA7E1F72D94F00F6604B /* ToppingTableViewController.swift */,
-				9493AA7C1F72D93E00F6604B /* ToppingTableViewCell.swift */,
-				94F2F80B1F7AA71200C95907 /* BuildYourBowlTableViewController.swift */,
-				94BC06801F6037BD0075A5BF /* Main.storyboard */,
-				948766511F731AAD00971F42 /* HowItWorksViewController.swift */,
-				9493AA701F72C18900F6604B /* EquipmentTableViewController.swift */,
-				9493AA721F72C19B00F6604B /* EquipmentTableViewCell.swift */,
-				9456341A1F73C3AC00D19B6C /* AppBackstoryViewController.swift */,
 				94BC06831F6037BD0075A5BF /* Assets.xcassets */,
-				94BC06851F6037BD0075A5BF /* LaunchScreen.storyboard */,
 				94BC06881F6037BD0075A5BF /* Info.plist */,
 			);
 			path = BfastBowlBldr;
@@ -176,6 +188,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6240181B1F8DC37100CD24DC /* IngredientCell.xib in Resources */,
 				94BC06871F6037BD0075A5BF /* LaunchScreen.storyboard in Resources */,
 				94BC06841F6037BD0075A5BF /* Assets.xcassets in Resources */,
 				94BC06821F6037BD0075A5BF /* Main.storyboard in Resources */,
@@ -190,25 +203,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				9493AA771F72CA0500F6604B /* AddInTableViewController.swift in Sources */,
-				943274AD1F6B300700E341A2 /* IngredientTableViewCell.swift in Sources */,
-				9493AA7D1F72D93E00F6604B /* ToppingTableViewCell.swift in Sources */,
-				9493AA7B1F72D18F00F6604B /* FruitTableViewCell.swift in Sources */,
 				9493AA791F72D17E00F6604B /* FruitTableViewController.swift in Sources */,
 				943274A91F6B09FF00E341A2 /* MainMenuTableViewController.swift in Sources */,
 				9456341B1F73C3AC00D19B6C /* AppBackstoryViewController.swift in Sources */,
 				9493AA7F1F72D94F00F6604B /* ToppingTableViewController.swift in Sources */,
 				943274AB1F6B2FAF00E341A2 /* IngredientTableViewController.swift in Sources */,
 				9493AA711F72C18900F6604B /* EquipmentTableViewController.swift in Sources */,
+				6240181A1F8DC37100CD24DC /* IngredientCell.swift in Sources */,
 				94BC067D1F6037BD0075A5BF /* AppDelegate.swift in Sources */,
 				9497824A1F6C3261003AB3E7 /* WebsiteViewController.swift in Sources */,
 				94D3262B1F83ABCB006E397C /* Ingredient.swift in Sources */,
-				9493AA731F72C19C00F6604B /* EquipmentTableViewCell.swift in Sources */,
 				9493AA6D1F72B50100F6604B /* LiquidTableViewController.swift in Sources */,
-				9493AA751F72C9F500F6604B /* AddInTableViewCell.swift in Sources */,
 				94F2F80C1F7AA71200C95907 /* BuildYourBowlTableViewController.swift in Sources */,
 				943274AF1F6B3CB900E341A2 /* IngredientDetailViewController.swift in Sources */,
 				948766521F731AAD00971F42 /* HowItWorksViewController.swift in Sources */,
-				9493AA6F1F72B51100F6604B /* LiquidTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

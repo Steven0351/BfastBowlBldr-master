@@ -58,12 +58,12 @@ class LiquidTableViewController: UITableViewController, CellProtocol {
     "https://www.amazon.com",
     "https://www.amazon.com"]
     
-    func switchButtonTapped(WithStatus status: Bool, ForCell myCell: IngredientTableViewCell) {
+    func switchButtonTapped(WithStatus status: Bool, ForCell myCell: IngredientCell) {
         
         guard let indexPath = self.tableView.indexPath(for: myCell) else { return }
         print("cell at indexpath \(String(describing: indexPath)) tapped with switch status \(status)")
         
-        let liquidSwitchSelected = myCell.ingredientName.text!
+        let liquidSwitchSelected = myCell.label.text!
         print("Liquid added/removed was \(String(describing: liquidSwitchSelected))")
         
         if status {
@@ -74,10 +74,7 @@ class LiquidTableViewController: UITableViewController, CellProtocol {
             selectedIngredients.remove(at: index)
         }
     }
-    
-    @IBAction func liquidSelected(_ sender: UIButton) {
-    }
-    
+  
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -92,7 +89,8 @@ class LiquidTableViewController: UITableViewController, CellProtocol {
             ingredients.append(newIngredient)
         }
         
-        
+        let ingredientNib = UINib(nibName: "IngredientCell", bundle: nil)
+        tableView.register(ingredientNib, forCellReuseIdentifier: "IngredientCell")
         tableView.estimatedRowHeight = 50
         
         
@@ -127,14 +125,9 @@ override func tableView(_ tableView: UITableView, numberOfRowsInSection section:
 
 
 override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "LiquidTableCell", for: indexPath) as! LiquidTableViewCell
-    
+    let cell = tableView.dequeueReusableCell(withIdentifier: "IngredientCell", for: indexPath) as! IngredientCell
     let row = indexPath.row
-    cell.ingredientName.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.headline)
-    cell.ingredientName.text = ingredients[row].name
-    cell.ingredientImage.image = UIImage(named: ingredients[row].imageString)
-    cell.delegate = self
-    
+    cell.configure(textForLabel: ingredients[row].name, image: ingredients[row].imageString, setDelegate: self)
     return cell
 }
 

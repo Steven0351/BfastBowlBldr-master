@@ -59,14 +59,14 @@ class IngredientTableViewController: UITableViewController, CellProtocol {
                       "https://www.amazon.com",
                       "https://www.amazon.com"]
     
-    func switchButtonTapped(WithStatus status: Bool, ForCell myCell: IngredientTableViewCell) {
+    func switchButtonTapped(WithStatus status: Bool, ForCell myCell: IngredientCell) {
         
         // using guard let syntax to unwrap the optional; if it returns nil then it exits the function and does nothing
         guard let indexPath = self.tableView.indexPath(for: myCell) else { return }
         print("cell at indexpath \(String(describing: indexPath)) tapped with switch status \(status)")
         
         // Changed the print statement to make more sense in this context
-        let grainSwitchSelected = myCell.ingredientName.text!
+        let grainSwitchSelected = myCell.label.text!
         print("Grain added/removed was \(String(describing: grainSwitchSelected))")
         
         // MARK: - This code block adds or removes selected ingredients based on the status of the switch.
@@ -109,8 +109,8 @@ class IngredientTableViewController: UITableViewController, CellProtocol {
                                            type: .grain)
             ingredients.append(newIngredient)
         }
-        
-        
+        let ingredientNib = UINib(nibName: "IngredientCell", bundle: nil)
+        tableView.register(ingredientNib, forCellReuseIdentifier: "IngredientCell")
         tableView.estimatedRowHeight = 50
         
         // Uncomment the following line to preserve selection between presentations
@@ -139,16 +139,10 @@ class IngredientTableViewController: UITableViewController, CellProtocol {
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "IngredientTableCell", for: indexPath) as! IngredientTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "IngredientCell", for: indexPath) as! IngredientCell
         
         let row = indexPath.row
-        cell.ingredientName.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.headline)
-        cell.ingredientName.text = ingredients[row].name
-        cell.ingredientImage.image = UIImage(named: ingredients[row].imageString)
-        //  cell.ingredientSwitch.isOn
-        // Configure the cell...
-        cell.delegate = self
-        
+        cell.configure(textForLabel: ingredients[row].name, image: ingredients[row].imageString, setDelegate: self)
         return cell
     }
     
