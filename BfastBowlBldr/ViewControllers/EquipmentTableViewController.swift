@@ -8,7 +8,10 @@
 
 import UIKit
 
-class EquipmentTableViewController: UITableViewController {
+class EquipmentTableViewController: UITableViewController, CellProtocol {
+    
+    var ingredients = [Ingredient]()
+    var selectedIngredients = [Ingredient]()
     
     var equipmentImages = [String]()
     var equipmentNames = [String]()
@@ -35,7 +38,18 @@ class EquipmentTableViewController: UITableViewController {
         equipmentPurch = ["https://www.amazon.com",
                           "https://www.amazon.com"]
         
+        for i in 0 ..< equipmentCopy.count {
+            let newIngredient = Ingredient(name: equipmentNames[i],
+                                           imageString: equipmentImages[i],
+                                           copy: equipmentCopy[i],
+                                           info: equipmentInfo[i],
+                                           purchaseURL: equipmentPurch[i],
+                                           type: .grain)
+            ingredients.append(newIngredient)
+        }
         
+        let ingredientNib = UINib(nibName: "IngredientCell", bundle: nil)
+        tableView.register(ingredientNib, forCellReuseIdentifier: "IngredientCell")
         tableView.estimatedRowHeight = 50
 
         // Uncomment the following line to preserve selection between presentations
@@ -64,56 +78,30 @@ class EquipmentTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-     let cell = tableView.dequeueReusableCell(withIdentifier: "EquipmentTableCell", for: indexPath) as! EquipmentTableViewCell
-     
-     let row = indexPath.row
-     cell.equipmentName.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.headline)
-     cell.equipmentName.text = equipmentNames[row]
-     cell.equipmentImage.image = UIImage(named: equipmentImages[row])
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "IngredientCell", for: indexPath) as! IngredientCell
+        
+        let row = indexPath.row
+        cell.configure(textForLabel: ingredients[row].name, image: ingredients[row].imageString, setDelegate: self)
         return cell
     }
    
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    func switchButtonTapped(WithStatus status: Bool, ForCell myCell: IngredientCell) {
+        
+        guard let indexPath = self.tableView.indexPath(for: myCell) else { return }
+        print("cell at indexpath \(String(describing: indexPath)) tapped with switch status \(status)")
+        
+        let liquidSwitchSelected = myCell.label.text!
+        print("Liquid added/removed was \(String(describing: liquidSwitchSelected))")
+        
+        if status {
+            selectedIngredients.append(ingredients[indexPath.row])
+        } else {
+            
+            guard let index = selectedIngredients.index(where: { $0.name == ingredients[indexPath.row].name }) else { return }
+            selectedIngredients.remove(at: index)
+        }
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    
-    // MARK: - Navigation
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
